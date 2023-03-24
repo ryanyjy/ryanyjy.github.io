@@ -28,7 +28,7 @@ h2 {
 .fa {
   padding: 20px;
   font-size: 30px;
-  width: 50px;
+  width: 110px;
   text-align: center;
   text-decoration: none;
 }
@@ -40,32 +40,53 @@ h2 {
 
 /* Set a specific color for each brand */
 .fa-instagram {
-  background: #833ab4;
+  background-color: #833ab4;
   background: linear-gradient(90deg, #833ab4 0%, #fd1d1d 50%, #fcaf45 100%);
   color: #ffffff;
 }
 
 .fa-linkedin {
-  background: #0a66c2;
+  background-color: #0a66c2;
   color: #ffffff;
 }
 
 .fa-behance {
-  background: #053eff;
+  background-color: #053eff;
   color: #ffffff;
 }
 
 .fa-youtube-play {
-  background: #ff0000;
+  background-color: #ff0000;
   color: #ffffff;
 }
 
-.fa-mail-forward {
-  background: #4ab4e0;
+.fa-mail-reply {
+  background-color: #4ab4e0;
   color: #cbe0fd;
+}
+
+.link-button {
+  background-color: #4ab4e0;
+  color: #cbe0fd;
+  font-family: Sen;
+  font-weight: bold;
 }
 
 .media-links a {
   padding: 20px;
   margin: 5px;
+}
+
+@media only screen and (max-width: 768px) {
+  .fa {
+    padding: 20px;
+    font-size: 20px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .media-links a {
+    margin: 3px;
+  }
 }
