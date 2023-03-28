@@ -67,7 +67,7 @@ h2 {
 
 .link-button {
   background-color: #4ab4e0;
-  color: #cbe0fd;
+  color: #ffffff;
   font-family: Sen;
   font-weight: bold;
 }
@@ -88,5 +88,13 @@ h2 {
 
   .media-links a {
     margin: 3px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 15px;
   }
 }
