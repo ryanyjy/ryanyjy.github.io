@@ -62,7 +62,7 @@ h2 {
 
 .fa-mail-reply {
   background-color: #4ab4e0;
-  color: #cbe0fd;
+  color: #ffffff;
 }
 
 .link-button {
@@ -77,11 +77,15 @@ h2 {
   margin: 5px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
+  .container {
+    width: 300px;
+  }
+
   .fa {
     padding: 20px;
     font-size: 20px;
-    width: 30px;
+    width: 80px;
     text-align: center;
     text-decoration: none;
   }
@@ -96,5 +100,31 @@ h2 {
 
   h2 {
     font-size: 17px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 500px;
+  }
+
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .media-links a {
+    margin: 5px;
+  }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 20px;
   }
 }
