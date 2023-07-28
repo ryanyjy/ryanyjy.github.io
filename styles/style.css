@@ -260,7 +260,7 @@ li a:hover:not(.active) {
   }
 }
 
-@media only screen and (orientation: landscape) {
+@media only screen and (orientation: landscape) and (max-width: 1023px) {
   .big-button {
     padding: 20px;
     font-size: 10px;
