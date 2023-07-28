@@ -253,7 +253,7 @@ li a:hover:not(.active) {
 
   #imageOnly {
     display: block;
-    height: 100lvh;
+    height: 100%;
   }
 
   .image-header {
@@ -284,7 +284,7 @@ li a:hover:not(.active) {
 
   .video-container {
     display: block;
-    height: 100lvh;
+    height: 100%;
   }
 
   #imageOnly {
@@ -295,36 +295,3 @@ li a:hover:not(.active) {
     display: none;
   }
 }
-
-
-
-/* .video-container {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-}
-
-.video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(88%);
-}
-
-.image-container {
-  display: flex;
-  justify-content: center;
-  filter: brightness(88%);
-}
-
-#imageOnly {
-  display: none;
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-} */
