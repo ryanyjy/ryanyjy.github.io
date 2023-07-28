@@ -219,9 +219,9 @@ li a:hover:not(.active) {
 
 /* mobile view */
 @media only screen and (max-width: 767px) {
-  .body {
+  /* .body {
     height: 100vh;
-  }
+  } */
 
   .container {
     width: 300px;
@@ -265,9 +265,9 @@ li a:hover:not(.active) {
 }
 
 @media only screen and (orientation: landscape) and (max-width: 1023px) {
-  .body {
+  /* .body {
     height: 100vh;
-  }
+  } */
 
   .container {
     width: 350px;
