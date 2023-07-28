@@ -70,19 +70,27 @@ li a:hover:not(.active) {
   filter: brightness(88%);
 }
 
-/* .image-container {
-  display: none;
-} */
-
-/* .image-container img {
-  width: 100%;
-  height: 100%;
-} */
+.image-container {
+  display: flex;
+  justify-content: center;
+  filter: brightness(88%);
+}
 
 #imageOnly {
-  display: none ;
+  display: none;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.image-header {
+  display: none;
+  position: absolute;
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  font-size: 22px;
+  color: #4ab4e0;
 }
 
 .container {
@@ -244,6 +252,10 @@ li a:hover:not(.active) {
   } */
 
   #imageOnly {
+    display: block;
+  }
+
+  .image-header {
     display: block;
   }
 }
