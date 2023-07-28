@@ -259,3 +259,29 @@ li a:hover:not(.active) {
     display: block;
   }
 }
+
+@media only screen and (orientation: landscape) {
+  .big-button {
+    padding: 20px;
+    font-size: 10px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+  }
+  
+  h1 {
+    font-size: 15px;
+  }
+
+  h2 {
+    font-size: 10px;
+  }
+
+  .video-container {
+    display: block;
+  }
+
+  #imageOnly {
+    display: none;
+  }
+}
