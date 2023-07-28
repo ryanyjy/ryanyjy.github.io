@@ -253,7 +253,6 @@ li a:hover:not(.active) {
 
   #imageOnly {
     display: block;
-    height: 100%;
   }
 
   .image-header {
@@ -284,7 +283,6 @@ li a:hover:not(.active) {
 
   .video-container {
     display: block;
-    height: 100%;
   }
 
   #imageOnly {
