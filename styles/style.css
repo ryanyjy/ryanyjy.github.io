@@ -219,11 +219,6 @@ li a:hover:not(.active) {
 
 /* mobile view */
 @media only screen and (max-width: 767px) {
-  .body {
-    height: 100vh;
-    min-height: 100vh
-  }
-
   .container {
     width: 300px;
   }
@@ -258,6 +253,7 @@ li a:hover:not(.active) {
 
   #imageOnly {
     display: block;
+    height: 100lvh;
   }
 
   .image-header {
@@ -266,11 +262,6 @@ li a:hover:not(.active) {
 }
 
 @media only screen and (orientation: landscape) and (max-width: 1023px) {
-  .body {
-    height: 100vh;
-    min-height: 100vh
-  }
-
   .container {
     width: 350px;
   }
@@ -293,6 +284,7 @@ li a:hover:not(.active) {
 
   .video-container {
     display: block;
+    height: 100lvh;
   }
 
   #imageOnly {
@@ -303,3 +295,36 @@ li a:hover:not(.active) {
     display: none;
   }
 }
+
+
+
+/* .video-container {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(88%);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  filter: brightness(88%);
+}
+
+#imageOnly {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+} */
