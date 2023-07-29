@@ -1,8 +1,28 @@
+html,
 body {
+  height: 100%;
   margin: 0;
+  padding: 0;
   font-family: "Sen", sans-serif;
   /* overflow-y: hidden;
   overflow-x: hidden; */
+}
+
+.entire-container {
+  height: 100%;
+  overflow: hidden; /* Hide overflow to prevent body scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+.first-content {
+  flex: 0 0 auto; /* Allow the first content to grow if needed, but don't shrink it */
+  overflow: hidden; /* Hide any potential overflow in the first content */
+}
+
+.additional-content {
+  flex: 1; /* Allow the additional content to take up remaining space */
+  overflow: auto; /* Enable scrolling for the additional content */
 }
 
 h1 {
@@ -272,7 +292,7 @@ li a:hover:not(.active) {
     text-align: center;
     text-decoration: none;
   }
-  
+
   h1 {
     font-size: 15px;
   }
