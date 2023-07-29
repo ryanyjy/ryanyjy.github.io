@@ -86,8 +86,8 @@ li a:hover:not(.active) {
   display: block;
   position: absolute;
   width: 100%;
-  /* flex: 0 0 auto;
-  flex: 1; */
+  /* flex: 0 0 auto; */
+  /* flex: 1; */
   height: 100vh;
   overflow: hidden;
   box-sizing: border-box;
@@ -111,9 +111,10 @@ li a:hover:not(.active) {
 
 #imageOnly {
   display: none;
-  position: relative;
   width: 100%;
-  height: 100vh;
+  /* flex: 0 0 auto; */
+  /* flex: 1; */
+  /* height: 100vh; */
   object-fit: cover;
 }
 
