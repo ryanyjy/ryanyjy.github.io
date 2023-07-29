@@ -84,10 +84,13 @@ li a:hover:not(.active) {
 
 .video-container {
   display: block;
-  position: relative;
+  position: absolute;
   width: 100%;
+  /* flex: 0 0 auto;
+  flex: 1; */
   height: 100vh;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 .video-container video {
@@ -108,6 +111,7 @@ li a:hover:not(.active) {
 
 #imageOnly {
   display: none;
+  position: relative;
   width: 100%;
   height: 100vh;
   object-fit: cover;
@@ -121,6 +125,7 @@ li a:hover:not(.active) {
   margin: 0;
   font-size: 22px;
   color: #4ab4e0;
+  opacity: 88%;
 }
 
 .container {
