@@ -1,13 +1,22 @@
+/* 
+#2b405c
+#3397c1
+#f8feff 
+*/
+
+/* dark blue
+bright blue
+slight blue white */
+
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: "Sen", sans-serif;
-  /* overflow-y: hidden;
-  overflow-x: hidden; */
 }
 
+/* these are to make sure the video/image will be fitted on mobile and will not be affected by link address tab */
 .entire-container {
   height: 100%;
   overflow: hidden; /* Hide overflow to prevent body scrolling */
@@ -26,12 +35,12 @@ body {
 }
 
 h1 {
-  color: #ffffff;
+  color: #f8feff;
   margin-top: 0;
 }
 
 h2 {
-  color: #4ab4e0;
+  color: #3397c1;
 }
 
 .navbar {
@@ -39,7 +48,7 @@ h2 {
   margin: auto;
   width: 100%;
   background-image: linear-gradient(
-    rgba(50, 50, 50, 0.8),
+    rgba(50, 50, 50, 0.5),
     rgba(255, 255, 255, 0)
   );
   z-index: 9999;
@@ -59,9 +68,10 @@ ul {
 
 li a {
   font-size: 25px;
+  font-weight: bold;
   display: flex;
   align-items: center;
-  color: white;
+  color: #f8feff;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -69,7 +79,7 @@ li a {
 }
 
 li a:hover:not(.active) {
-  color: blue;
+  color: #3397c1;
 }
 
 .video-container {
@@ -178,32 +188,46 @@ li a:hover:not(.active) {
 }
 
 .fa-mail-reply {
-  background-color: #4ab4e0;
+  background-color: #3397c1;
   color: #ffffff;
+}
+
+.link-button {
+  background-color: #3397c1;
+  color: #ffffff;
+  font-family: Sen;
+  font-weight: bold;
 }
 
 .center-button {
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   position: absolute;
-  top: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f8feff;
+  top: 93%;
   left: 50%;
 }
 
-.fa-angle-up {
-  background-color: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-size: 50px;
-  padding: 0;
+.center-button p {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 7px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  width: 45px;
 }
 
-.link-button {
-  background-color: #4ab4e0;
-  color: #ffffff;
-  font-family: Sen;
-  font-weight: bold;
+.fa-angle-up {
+  display: flex;
+  background-color: transparent;
+  border: none;
+  color: #3397c1;
+  cursor: pointer;
+  font-size: 50px;
 }
 
 .media-links a {
