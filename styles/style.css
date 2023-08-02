@@ -17,14 +17,20 @@ body {
 }
 
 #particles-js {
-  background-image: url("/images/cubePortrait.png");
+  /* background-image: url("/images/cubePortrait.png");
   width: 100%;
   height: 100svh;
   display: none;
 
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: center; */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* these are to make sure the video/image will be fitted on mobile and will not be affected by link address tab */
@@ -49,8 +55,6 @@ body {
 }
 /* Allow the additional content to take up remaining space */
 /* Enable scrolling for the additional content */
-
-
 
 h1 {
   color: #f8feff;
@@ -109,6 +113,15 @@ li a:hover:not(.active) {
   box-sizing: border-box;
 }
 
+.video-container-mobile {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
 .video-container video {
   position: absolute;
   top: 0;
@@ -117,6 +130,16 @@ li a:hover:not(.active) {
   height: 100svh;
   object-fit: cover;
   filter: brightness(88%);
+}
+
+.video-container-mobile video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100svh;
+  object-fit: cover;
+  /* filter: brightness(88%); */
 }
 
 .image-container {
@@ -311,6 +334,10 @@ li a:hover:not(.active) {
   .image-header {
     display: block;
   }
+
+  .video-container-mobile {
+    display: block;
+  }
 }
 
 @media only screen and (orientation: landscape) and (max-width: 1023px) {
@@ -336,6 +363,10 @@ li a:hover:not(.active) {
 
   .video-container {
     display: block;
+  }
+
+  .video-container-mobile {
+    display: none;
   }
 
   #particles-js {
