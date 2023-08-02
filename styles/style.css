@@ -16,23 +16,43 @@ body {
   font-family: "Sen", sans-serif;
 }
 
+#particles-js {
+  width: 100%;
+  height: 100svh;
+  background-image: url("/images/cubePortrait.png");
+
+  display: none;
+  position: absolute;
+  object-fit: cover;
+}
+
+/* display: none;
+  width: 100%;
+  height: 100svh;
+  object-fit: cover; */
+
 /* these are to make sure the video/image will be fitted on mobile and will not be affected by link address tab */
-.entire-container {
+/* .entire-container {
   height: 100%;
-  overflow: hidden; /* Hide overflow to prevent body scrolling */
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
-}
+} */
+/* Hide overflow to prevent body scrolling */
 
-.first-content {
-  flex: 0 0 auto; /* Allow the first content to grow if needed, but don't shrink it */
-  overflow: hidden; /* Hide any potential overflow in the first content */
-}
+/* .first-content {
+  flex: 0 0 auto; 
+  overflow: hidden; 
+} */
+/* Allow the first content to grow if needed, but don't shrink it */
+/* Hide any potential overflow in the first content */
 
-.additional-content {
-  flex: 1; /* Allow the additional content to take up remaining space */
-  overflow: auto; /* Enable scrolling for the additional content */
-}
+/* .additional-content {
+  flex: 1; 
+  overflow: auto; 
+} */
+/* Allow the additional content to take up remaining space */
+/* Enable scrolling for the additional content */
 
 h1 {
   color: #f8feff;
@@ -303,6 +323,10 @@ li a:hover:not(.active) {
     display: block;
   }
 
+  #particles-js {
+    display: block;
+  }
+
   .image-header {
     display: block;
   }
@@ -334,6 +358,10 @@ li a:hover:not(.active) {
   }
 
   #imageOnly {
+    display: none;
+  }
+
+  #particles-js {
     display: none;
   }
 
