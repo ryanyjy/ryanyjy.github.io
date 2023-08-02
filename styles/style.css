@@ -150,7 +150,6 @@ li a:hover:not(.active) {
 
 .image-header {
   display: none;
-  position: absolute;
   text-align: center;
   padding: 20px;
   margin: 0;
