@@ -1,4 +1,4 @@
-/* 
+/* Theme
 #2b405c
 #3397c1
 #f8feff 
@@ -50,6 +50,8 @@ body {
 /* Allow the additional content to take up remaining space */
 /* Enable scrolling for the additional content */
 
+
+
 h1 {
   color: #f8feff;
   margin-top: 0;
@@ -100,10 +102,8 @@ li a:hover:not(.active) {
 
 .video-container {
   display: block;
-  position: absolute;
+  position: relative;
   width: 100%;
-  /* flex: 0 0 auto; */
-  /* flex: 1; */
   height: 100vh;
   overflow: hidden;
   box-sizing: border-box;
@@ -123,13 +123,6 @@ li a:hover:not(.active) {
   display: flex;
   justify-content: center;
   filter: brightness(88%);
-}
-
-#imageOnly {
-  display: none;
-  width: 100%;
-  height: 100svh;
-  object-fit: cover;
 }
 
 .image-header {

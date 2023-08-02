@@ -45,7 +45,7 @@ particlesJS(
         value: 0.8,
         random: true,
         anim: {
-          enable: false,
+          enable: true,
           speed: 1,
           opacity_min: 0.1,
           sync: false,
@@ -92,7 +92,7 @@ particlesJS(
         },
         onclick: {
           enable: true,
-          mode: "repulse",
+          mode: "push",
         },
         resize: true,
       },
@@ -111,11 +111,11 @@ particlesJS(
           speed: 3,
         },
         repulse: {
-          distance: 50,
-          duration: 0.4,
+          distance: 200,
+          duration: 0.5,
         },
         push: {
-          particles_nb: 4,
+          particles_nb: 5,
         },
         remove: {
           particles_nb: 2,
