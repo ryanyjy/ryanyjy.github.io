@@ -17,40 +17,36 @@ body {
 }
 
 #particles-js {
+  background-image: url("/images/cubePortrait.png");
   width: 100%;
   height: 100svh;
-  background-image: url("/images/cubePortrait.png");
-
   display: none;
-  position: absolute;
-  object-fit: cover;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-/* display: none;
-  width: 100%;
-  height: 100svh;
-  object-fit: cover; */
-
 /* these are to make sure the video/image will be fitted on mobile and will not be affected by link address tab */
-/* .entire-container {
+.entire-container {
   height: 100%;
-  overflow: hidden; 
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-} */
+}
 /* Hide overflow to prevent body scrolling */
 
-/* .first-content {
-  flex: 0 0 auto; 
-  overflow: hidden; 
-} */
+.first-content {
+  flex: 0 0 auto;
+  overflow: hidden;
+}
 /* Allow the first content to grow if needed, but don't shrink it */
 /* Hide any potential overflow in the first content */
 
-/* .additional-content {
-  flex: 1; 
-  overflow: auto; 
-} */
+.additional-content {
+  flex: 1;
+  overflow: auto;
+}
 /* Allow the additional content to take up remaining space */
 /* Enable scrolling for the additional content */
 
@@ -315,14 +311,6 @@ li a:hover:not(.active) {
     display: none;
   }
 
-  /* .img-container {
-    display: block;
-  } */
-
-  #imageOnly {
-    display: block;
-  }
-
   #particles-js {
     display: block;
   }
@@ -355,10 +343,6 @@ li a:hover:not(.active) {
 
   .video-container {
     display: block;
-  }
-
-  #imageOnly {
-    display: none;
   }
 
   #particles-js {
