@@ -16,16 +16,9 @@ body {
   font-family: "Sen", sans-serif;
 }
 
-#particles-js {
-  /* background-image: url("/images/cubePortrait.png");
-  width: 100%;
-  height: 100svh;
-  display: none;
-
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
-
+#particles-js,
+#particles-js2,
+#tsparticles {
   position: absolute;
   top: 0;
   left: 0;
