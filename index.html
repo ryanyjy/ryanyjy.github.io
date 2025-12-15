@@ -1,96 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="utf-8">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Primary Meta Tags -->
+    <title>Ryjy's Website</title>
+    <meta name="title" content="Ryjy's Website" />
+    <meta
+      name="description"
+      content="Graphic Design | Image Editing | Video Editing | Animation | UI/UX | 3D Modelling & Sculpting | Front-end
+  Development | Audio Editing"
+    />
+    <link rel="icon" type="image/x-icon" href="/images/preview.png" />
 
-  <!-- Primary Meta Tags -->
-  <title>Ryjy's Website</title>
-  <meta name="title" content="Ryjy's Website" />
-  <meta name="description" content="Graphic Design | Image Editing | Video Editing | Animation | UI/UX | 3D Modelling & Sculpting | Front-end
-  Development | Audio Editing" />
-  <link rel="icon" type="image/x-icon" href="/images/preview.png">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://ryanyjy.github.io/" />
+    <meta property="og:title" content="Ryjy's Website" />
+    <meta
+      property="og:description"
+      content="Graphic Design | Image Editing | Video Editing | Animation | UI/UX | 3D Modelling & Sculpting | Front-end
+  Development | Audio Editing"
+    />
+    <meta
+      property="og:image"
+      content="https://ryanyjy.github.io/images/cube.png"
+    />
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://ryanyjy.github.io/" />
-  <meta property="og:title" content="Ryjy's Website" />
-  <meta property="og:description" content="Graphic Design | Image Editing | Video Editing | Animation | UI/UX | 3D Modelling & Sculpting | Front-end
-  Development | Audio Editing" />
-  <meta property="og:image" content="https://ryanyjy.github.io/images/cube.png" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://ryanyjy.github.io/" />
+    <meta property="twitter:title" content="Ryjy's Website" />
+    <meta
+      property="twitter:description"
+      content="Graphic Design | Image Editing | Video Editing | Animation | UI/UX | 3D Modelling & Sculpting | Front-end
+  Development | Audio Editing"
+    />
+    <meta
+      property="twitter:image"
+      content="https://ryanyjy.github.io/images/cube.png"
+    />
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image" />
-  <meta property="twitter:url" content="https://ryanyjy.github.io/" />
-  <meta property="twitter:title" content="Ryjy's Website" />
-  <meta property="twitter:description" content="Graphic Design | Image Editing | Video Editing | Animation | UI/UX | 3D Modelling & Sculpting | Front-end
-  Development | Audio Editing" />
-  <meta property="twitter:image" content="https://ryanyjy.github.io/images/cube.png" />
+    <!-- Icon Library -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-  <!-- Icon Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Responsiveness -->
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-  <!-- Responsiveness -->
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
 
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
-</head>
-
-<body>
-  <div class="entire-container">
-    <div class="banner-content">
-      <div class="banner-video-container">
-        <video autoplay loop muted>
-          <source src="videos/RyCompiledSmall.mp4" type="video/mp4">
-        </video>
+  <body>
+    <div class="entire-container">
+      <div class="banner-content">
+        <div class="banner-video-container">
+          <video autoplay loop muted>
+            <source src="videos/RyCompiledSmall.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="banner-video-container-mobile">
+          <video src="videos/cubeGlowCompact.mp4" autoplay loop muted></video>
+          <div id="ts-particles"></div>
+          <h1 class="banner-header">
+            Please view this website on a
+            <span style="color: #f1933b">bigger screen</span> to play
+            <span style="color: #f1933b">video</span>
+          </h1>
+        </div>
       </div>
-      <div class="banner-video-container-mobile">
-        <video src="videos/cubeGlowCompact.mp4" autoplay loop muted></video>
-        <div id="ts-particles"></div>
-        <h1 class="banner-header">Please view this website on a <span style="color: #f1933b;">bigger screen</span> to
-          play
-          <span style="color: #f1933b;">video</span>
-        </h1>
-      </div>
-    </div>
 
-    <div class="additional-content">
-      <div id="tldr-hidden-content-shade" class="tldr-container-shade" style="display: none;"></div>
-      <div class="tldr-content">
-        <div id="tldr-hidden-content" class="tldr-container" style="display: none;">
-          <div class="tldr-justify-content">
-            <h1>Hey, I'm Ryan and I'm a Multimedia Designer</h1>
-            <h2>Graphic Design | Image Editing | Video Editing | Animation | UI/UX | 3D Modelling & Sculpting |
-              Front-end
-              Development | Audio Editing</h2>
-            <div class="tldr-media-links">
-              <a href="https://www.instagram.com/ryanyjy/" class="fa fa-instagram big-button"></a>
-              <a href="https://www.linkedin.com/in/jia-yung-yeap-156050203/" class="fa fa-linkedin big-button"></a>
-              <a href="https://www.behance.net/jiayungyeap" class="fa fa-behance big-button"></a>
-              <a href="https://www.youtube.com/channel/UCWFt8i2lzMs_JhE0a6jFOUg"
-                class="fa fa-youtube-play big-button"></a>
-              <a href="mailto: ryanyjy26@gmail.com" class="fa fa-mail-reply big-button"></a>
-              <a href="/documents/Yeap Jia Yung's CV.pdf" download class="fa link-button big-button">CV</a>
+      <div class="additional-content">
+        <div
+          id="tldr-hidden-content-shade"
+          class="tldr-container-shade"
+          style="display: none"
+        ></div>
+        <div class="tldr-content">
+          <div
+            id="tldr-hidden-content"
+            class="tldr-container"
+            style="display: none"
+          >
+            <div class="tldr-justify-content">
+              <h1>Hey, I'm Ryan and I'm a Multimedia Designer</h1>
+              <h2>
+                Graphic Design | Image Editing | Video Editing | Animation |
+                UI/UX | 3D Modelling & Sculpting | Front-end Development | Audio
+                Editing
+              </h2>
+              <div class="tldr-media-links">
+                <a
+                  href="https://www.instagram.com/ryanyjy/"
+                  class="fa fa-instagram big-button"
+                ></a>
+                <a
+                  href="https://www.linkedin.com/in/jia-yung-yeap-156050203/"
+                  class="fa fa-linkedin big-button"
+                ></a>
+                <a
+                  href="https://www.behance.net/jiayungyeap"
+                  class="fa fa-behance big-button"
+                ></a>
+                <a
+                  href="https://www.youtube.com/channel/UCWFt8i2lzMs_JhE0a6jFOUg"
+                  class="fa fa-youtube-play big-button"
+                ></a>
+                <a
+                  href="mailto:ryanyjy26@gmail.com"
+                  class="fa fa-mail-reply big-button"
+                ></a>
+                <a
+                  href="/documents/Yeap_Jia_Yung's_CV.pdf"
+                  download
+                  class="fa link-button big-button"
+                  >CV</a
+                >
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="tldr-center-button">
-    <p>tl</p><button class="fa fa-angle-up" onclick="showContent()"></button>
-    <p>dr</p>
-  </div>
+    <div class="tldr-center-button">
+      <p>tl</p>
+      <button class="fa fa-angle-up" onclick="showContent()"></button>
+      <p>dr</p>
+    </div>
 
-  <script src="scripts/script.js"></script>
+    <script src="scripts/script.js"></script>
 
-  <!-- tsparticles -->
-  <script src="scripts/tsparticles.bundle.min.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.11.1/tsparticles.bundle.min.js"></script> -->
-  <script src="scripts/tsapp.js"></script>
-</body>
-
+    <!-- tsparticles -->
+    <script src="scripts/tsparticles.bundle.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.11.1/tsparticles.bundle.min.js"></script> -->
+    <script src="scripts/tsapp.js"></script>
+  </body>
 </html>
