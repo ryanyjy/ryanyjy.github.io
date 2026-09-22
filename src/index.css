@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@font-face {
+  font-family: "Xirod";
+  src: url("/fonts/Xirod.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-xirod: "Xirod", sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #ffffff;
+  overflow: hidden;
+}
