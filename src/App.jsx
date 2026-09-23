@@ -3,11 +3,12 @@ import MovingLines from "./components/MovingLines";
 import SocialLinks from "./components/SocialLinks";
 
 const TEAL = "#3397c1";
-const BACKGROUND_INTERVAL_MS = 25_000;
+const BACKGROUND_INTERVAL_MS = 15_000;
 
 export default function App() {
   const [isTeal, setIsTeal] = useState(false);
   const audioRef = useRef(null);
+  const resumeOnVisibleRef = useRef(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,9 +39,21 @@ export default function App() {
     document.addEventListener("click", startOnInteraction);
     document.addEventListener("keydown", startOnInteraction);
 
+    const onVisibilityChange = () => {
+      if (document.hidden) {
+        resumeOnVisibleRef.current = !audio.paused;
+        audio.pause();
+      } else if (resumeOnVisibleRef.current) {
+        audio.play().catch(() => {});
+      }
+    };
+
+    document.addEventListener("visibilitychange", onVisibilityChange);
+
     return () => {
       document.removeEventListener("click", startOnInteraction);
       document.removeEventListener("keydown", startOnInteraction);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
     };
   }, []);
 

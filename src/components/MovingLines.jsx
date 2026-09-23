@@ -3,6 +3,8 @@ import { useEffect, useRef } from "react";
 const TEAL = "#3397c1";
 const LINE_HEIGHT = 4;
 const LINE_COUNT = 90;
+const MIN_Y_GAP = 16;
+const Y_MARGIN = 40;
 
 function getPalette(isTeal) {
   return isTeal
@@ -14,7 +16,41 @@ function randomBetween(min, max) {
   return min + Math.random() * (max - min);
 }
 
-function createLine(width, height) {
+function maxLineCount(height) {
+  const usable = height - Y_MARGIN * 2;
+  if (usable <= 0) return 1;
+  return Math.max(1, Math.min(LINE_COUNT, Math.floor(usable / MIN_Y_GAP) + 1));
+}
+
+function pickLineY(existingLines, height) {
+  const minY = Y_MARGIN;
+  const maxY = Math.max(minY, height - Y_MARGIN - LINE_HEIGHT);
+
+  for (let attempt = 0; attempt < 80; attempt++) {
+    const y = randomBetween(minY, maxY);
+    const tooClose = existingLines.some(
+      (line) => Math.abs(line.y - y) < MIN_Y_GAP
+    );
+    if (!tooClose) return y;
+  }
+
+  let bestY = randomBetween(minY, maxY);
+  let bestClearance = -1;
+  for (let attempt = 0; attempt < 40; attempt++) {
+    const y = randomBetween(minY, maxY);
+    const clearance = existingLines.reduce(
+      (min, line) => Math.min(min, Math.abs(line.y - y)),
+      Infinity
+    );
+    if (clearance > bestClearance) {
+      bestClearance = clearance;
+      bestY = y;
+    }
+  }
+  return bestY;
+}
+
+function createLine(width, height, existingLines = []) {
   const isDual = Math.random() > 0.55;
   const totalWidth = randomBetween(40, 220);
   const segments = [];
@@ -37,15 +73,24 @@ function createLine(width, height) {
 
   return {
     x: randomBetween(-totalWidth, width),
-    y: randomBetween(40, height - 40),
+    y: pickLineY(existingLines, height),
     segments,
     totalWidth,
     speed: randomBetween(0.6, 2.4),
   };
 }
 
-function spawnLine(width, height) {
-  const line = createLine(width, height);
+function createLines(width, height) {
+  const count = maxLineCount(height);
+  const lines = [];
+  for (let i = 0; i < count; i++) {
+    lines.push(createLine(width, height, lines));
+  }
+  return lines;
+}
+
+function spawnLine(width, height, otherLines) {
+  const line = createLine(width, height, otherLines);
   line.x = -line.totalWidth - randomBetween(0, 200);
   return line;
 }
@@ -74,9 +119,7 @@ export default function MovingLines({ isTeal }) {
       canvas.height = height * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
 
-      linesRef.current = Array.from({ length: LINE_COUNT }, () =>
-        createLine(width, height)
-      );
+      linesRef.current = createLines(width, height);
     };
 
     const draw = () => {
@@ -84,12 +127,13 @@ export default function MovingLines({ isTeal }) {
       const palette = paletteRef.current;
       ctx.clearRect(0, 0, width, height);
 
-      linesRef.current = linesRef.current.map((line) => {
+      linesRef.current = linesRef.current.map((line, index, allLines) => {
         let { x } = line;
         x += line.speed;
 
         if (x > width) {
-          return spawnLine(width, height);
+          const others = allLines.filter((_, i) => i !== index);
+          return spawnLine(width, height, others);
         }
 
         for (const segment of line.segments) {
